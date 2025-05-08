@@ -50,6 +50,8 @@
       
     
     
+      <link rel="stylesheet" href="../../js/mermaid-custom.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -552,108 +554,6 @@
       High-Level Architecture
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="High-Level Architecture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#component-specifications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Component Specifications
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Component Specifications">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#props" class="md-nav__link">
-    <span class="md-ellipsis">
-      Props
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#events" class="md-nav__link">
-    <span class="md-ellipsis">
-      Events
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#css-classes" class="md-nav__link">
-    <span class="md-ellipsis">
-      CSS Classes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#props_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Props
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#events_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Events
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#css-classes_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      CSS Classes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#props_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Props
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#events_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Events
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#css-classes_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      CSS Classes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1653,6 +1553,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core_functions/mermaid_diagram_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mermaid Diagram Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1694,263 +1617,6 @@
         class AlbumSidebar,ConfirmationModal components;
     end</code></pre>
 <p><em>Visual representation of the component relationships showing how the Dashboard and Edit Rankings screens interact with supporting panels. Provides developers with a clear understanding of the application's structural organization and navigation flow between major components.</em></p>
-<h3 id="component-specifications">Component Specifications<a class="headerlink" href="#component-specifications" title="Permanent link">&para;</a></h3>
-<p>For implementation by the production team, here are the detailed specifications of key components:</p>
-<p><strong>Figure: DashboardCard Component Specification</strong></p>
-<h4 id="props">Props<a class="headerlink" href="#props" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th>Prop Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>tabId</td>
-<td>string</td>
-<td>Yes</td>
-<td>Album identifier</td>
-</tr>
-<tr>
-<td>title</td>
-<td>string</td>
-<td>Yes</td>
-<td>Album title to display</td>
-</tr>
-<tr>
-<td>emoji</td>
-<td>string</td>
-<td>No</td>
-<td>Emoji character for album</td>
-</tr>
-<tr>
-<td>rating</td>
-<td>number (0-5)</td>
-<td>No</td>
-<td>User's rating (whole numbers)</td>
-</tr>
-<tr>
-<td>selectedCount</td>
-<td>number</td>
-<td>No</td>
-<td>Number of selected songs</td>
-</tr>
-<tr>
-<td>totalCount</td>
-<td>number</td>
-<td>Yes</td>
-<td>Total number of songs</td>
-</tr>
-</tbody>
-</table>
-<h4 id="events">Events<a class="headerlink" href="#events" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th>Event Name</th>
-<th>Payload</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>@open-sidebar</td>
-<td>tabId: string</td>
-<td>Emitted when card is clicked</td>
-</tr>
-</tbody>
-</table>
-<h4 id="css-classes">CSS Classes<a class="headerlink" href="#css-classes" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>dashboard-grid-card</td>
-<td>Base styling for album cards</td>
-</tr>
-<tr>
-<td>dashboard-stars</td>
-<td>Styling for star rating display</td>
-</tr>
-</tbody>
-</table>
-<p><em>Technical blueprint detailing all required props, emitted events, and CSS classes for the album card component. Enables consistent implementation of album cards with proper data validation and event handling.</em></p>
-<p><strong>Figure: SidebarPanel Component Specification</strong></p>
-<h4 id="props_1">Props<a class="headerlink" href="#props_1" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th>Prop Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>visible</td>
-<td>boolean</td>
-<td>Yes</td>
-<td>Controls panel visibility</td>
-</tr>
-<tr>
-<td>tabId</td>
-<td>string</td>
-<td>Yes</td>
-<td>Current active album id</td>
-</tr>
-<tr>
-<td>tabTitle</td>
-<td>string</td>
-<td>Yes</td>
-<td>Title to display in panel</td>
-</tr>
-<tr>
-<td>sidebarTabs</td>
-<td>Array</td>
-<td>Yes</td>
-<td>Tab configuration objects</td>
-</tr>
-</tbody>
-</table>
-<h4 id="events_1">Events<a class="headerlink" href="#events_1" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th>Event Name</th>
-<th>Payload</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>@close</td>
-<td>none</td>
-<td>Emitted when panel closes</td>
-</tr>
-<tr>
-<td>@switch-tab</td>
-<td>tabId: string</td>
-<td>Emitted when tab changes</td>
-</tr>
-</tbody>
-</table>
-<h4 id="css-classes_1">CSS Classes<a class="headerlink" href="#css-classes_1" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>fixed inset-0</td>
-<td>Full-screen overlay for sidebar panels</td>
-</tr>
-<tr>
-<td>max-w-sm</td>
-<td>Width constraint for sidebar on larger screens</td>
-</tr>
-<tr>
-<td>bg-white shadow-xl</td>
-<td>Visual styling for panels</td>
-</tr>
-</tbody>
-</table>
-<p><em>Complete interface definition for the sliding panel including visibility controls and tab management. Ensures proper implementation of the panel's responsive behavior and event communication with parent components.</em></p>
-<p><strong>Figure: EditRankingsTabs Component Specification</strong></p>
-<h4 id="props_2">Props<a class="headerlink" href="#props_2" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th>Prop Name</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>tabs</td>
-<td>Array</td>
-<td>Yes</td>
-<td>Tab configuration objects</td>
-</tr>
-<tr>
-<td>activeTab</td>
-<td>string</td>
-<td>Yes</td>
-<td>Current active tab id</td>
-</tr>
-<tr>
-<td>rankedItems</td>
-<td>Array</td>
-<td>Yes</td>
-<td>Items in ranked order</td>
-</tr>
-<tr>
-<td>unrankedItems</td>
-<td>Array</td>
-<td>Yes</td>
-<td>Items not yet ranked</td>
-</tr>
-</tbody>
-</table>
-<h4 id="events_2">Events<a class="headerlink" href="#events_2" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th>Event Name</th>
-<th>Payload</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>@switch-tab</td>
-<td>tabId: string</td>
-<td>Emitted when tab changes</td>
-</tr>
-<tr>
-<td>@toggle-rank</td>
-<td>{id: string, ranked: boolean}</td>
-<td>Emitted when item rank changes</td>
-</tr>
-</tbody>
-</table>
-<h4 id="css-classes_2">CSS Classes<a class="headerlink" href="#css-classes_2" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th>Class Name</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>flex flex-col flex-grow</td>
-<td>Layout structure for tab containers</td>
-</tr>
-<tr>
-<td>overflow-x-auto</td>
-<td>Enables horizontal scrolling for tabs</td>
-</tr>
-<tr>
-<td>sticky top-14 z-10</td>
-<td>Positioning for fixed tab navigation</td>
-</tr>
-</tbody>
-</table>
-<p><em>Technical requirements for the tab navigation system including data structures for ranked and unranked items. Facilitates correct implementation of the ranking interface with proper state management.</em></p>
 
 
 
