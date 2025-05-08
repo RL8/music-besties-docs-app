@@ -483,8 +483,6 @@
       
         
       
-        
-      
     
     
     
@@ -537,29 +535,6 @@
   
   <span class="md-ellipsis">
     Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../application_overview.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Application Overview
     
   </span>
   
@@ -1779,26 +1754,37 @@
 <p>The Music Besties application offers several navigation paths based on user goals. Below are the primary user journeys through the application.</p>
 <h3 id="primary-navigation-flows">Primary Navigation Flows<a class="headerlink" href="#primary-navigation-flows" title="Permanent link">&para;</a></h3>
 <pre class="mermaid"><code>flowchart TD
-    Start([App Launch]) --&gt; Dashboard[Dashboard Screen]
-    Dashboard --&gt;|Click Album Card| Sidebar[Album Sidebar Panel]
-    Dashboard --&gt;|Click Edit Rankings| EditRankings[Edit Rankings Screen]
+    Start([App Launch]) --&gt; Dashboard[Dashboard View]
+    Dashboard --&gt;|Click Era Card| Sidebar[Sidebar Panel]
+    Dashboard --&gt;|Click Edit Button| EditRankings[Edit Rankings View]
+    Dashboard --&gt;|Click Hamburger Menu| NavSidebar[Left Sidebar Navigation]
+
+    NavSidebar --&gt;|Dashboard| Dashboard
+    NavSidebar --&gt;|Profile| Profile[Profile View]
+    NavSidebar --&gt;|Settings| Settings[Settings View]
+    NavSidebar --&gt;|About| About[About View]
+    NavSidebar --&gt;|Terms &amp; Privacy| Terms[Terms/Privacy View]
 
     Sidebar --&gt;|Close Button| Dashboard
-    Sidebar --&gt;|Edit Review| ReviewPanel[Review Panel]
-    ReviewPanel --&gt;|Save/Cancel| Sidebar
+    Sidebar --&gt;|Switch to Review Tab| SidebarReview[Review Tab]
+    SidebarReview --&gt;|Edit Review| ReviewPanel[Review Form]
+    ReviewPanel --&gt;|Save/Cancel| SidebarReview
 
-    EditRankings --&gt;|Back Button| Dashboard
-    EditRankings --&gt;|Try to Exit with Unsaved Changes| ConfirmModal[Confirmation Modal]
-    ConfirmModal --&gt;|Cancel| EditRankings
-    ConfirmModal --&gt;|Confirm| Dashboard
+    EditRankings --&gt;|Cancel Button| Dashboard
+    EditRankings --&gt;|Save Button| Dashboard
 
-    classDef screen fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef panel fill:#bbf,stroke:#333,stroke-width:1px;
-    classDef modal fill:#ffd,stroke:#333,stroke-width:1px;
+    Profile --&gt;|Back Button| Dashboard
+    Settings --&gt;|Back Button| Dashboard
+    About --&gt;|Back Button| Dashboard
+    Terms --&gt;|Back Button| Dashboard
 
-    class Dashboard,EditRankings screen;
-    class Sidebar,ReviewPanel panel;
-    class ConfirmModal modal;</code></pre>
+    classDef primaryViews fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef supportingViews fill:#bbf,stroke:#333,stroke-width:1px;
+    classDef navSystem fill:#dfd,stroke:#333,stroke-width:1px;
+
+    class Dashboard,EditRankings primaryViews;
+    class Sidebar,SidebarReview,ReviewPanel supportingViews;
+    class NavSidebar,Profile,Settings,About,Terms navSystem;</code></pre>
 <h2 id="user-personas-and-navigation-patterns">User Personas and Navigation Patterns<a class="headerlink" href="#user-personas-and-navigation-patterns" title="Permanent link">&para;</a></h2>
 <h3 id="casual-listener">Casual Listener<a class="headerlink" href="#casual-listener" title="Permanent link">&para;</a></h3>
 <p><strong>Primary Goals:</strong>

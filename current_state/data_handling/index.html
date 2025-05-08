@@ -483,8 +483,6 @@
       
         
       
-        
-      
     
     
     
@@ -537,29 +535,6 @@
   
   <span class="md-ellipsis">
     Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../application_overview.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Application Overview
     
   </span>
   
@@ -1761,12 +1736,12 @@
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <!-- AI: Add relevant and concise text in this section about the application's data structure -->
 
-<p>Music Besties uses a structured data model to organize album and song information. The application maintains two primary types of data:</p>
+<p>Music Besties uses a structured data model to organize music era and song information. The application implements a unidirectional data flow pattern with two primary types of data:</p>
 <ol>
-<li><strong>Static Album Data</strong>: Pre-defined information about albums including identifiers, titles, and song lists</li>
-<li><strong>User Preference Data</strong>: User-generated content including rankings, ratings, and reviews</li>
+<li><strong>Static Era Data</strong>: Pre-defined information about music eras including identifiers, titles, and song lists</li>
+<li><strong>User Preference Data</strong>: User-generated content including selections, rankings, ratings, and reviews</li>
 </ol>
-<p>The data structure is designed to be lightweight and efficient, with a focus on maintaining a clear separation between core album data and user-specific preferences. This separation allows the application to reset user data without affecting the underlying album information if needed.</p>
+<p>The data structure is designed to be lightweight and efficient, with a clear separation between core era data and user-specific preferences. This separation allows the application to reset user data without affecting the underlying era information if needed.</p>
 <p>All data is stored locally in the browser's LocalStorage, structured as JSON objects for easy serialization and retrieval. The application uses a reactive state management approach to ensure that UI components automatically update when the underlying data changes.</p>
 <p><strong>Figure: Data Structure Model</strong></p>
 <pre class="mermaid"><code>classDiagram

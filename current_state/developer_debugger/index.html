@@ -483,8 +483,6 @@
       
         
       
-        
-      
     
     
     
@@ -537,29 +535,6 @@
   
   <span class="md-ellipsis">
     Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../application_overview.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Application Overview
     
   </span>
   
@@ -742,13 +717,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dashboard-screen" class="md-nav__link">
+  <a href="#dashboard-view" class="md-nav__link">
     <span class="md-ellipsis">
-      Dashboard Screen
+      Dashboard View
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Dashboard Screen">
+    <nav class="md-nav" aria-label="Dashboard View">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -784,13 +759,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#edit-rankings-screen" class="md-nav__link">
+  <a href="#edit-rankings-view" class="md-nav__link">
     <span class="md-ellipsis">
-      Edit Rankings Screen
+      Edit Rankings View
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Edit Rankings Screen">
+    <nav class="md-nav" aria-label="Edit Rankings View">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1827,13 +1802,14 @@
 
 <h1 id="developer-debugger">Developer Debugger<a class="headerlink" href="#developer-debugger" title="Permanent link">&para;</a></h1>
 <p>This section provides breakdown of the technical details of each screen in the app <!-- AI: Never edit this text --></p>
-<h2 id="dashboard-screen">Dashboard Screen<a class="headerlink" href="#dashboard-screen" title="Permanent link">&para;</a></h2>
+<h2 id="dashboard-view">Dashboard View<a class="headerlink" href="#dashboard-view" title="Permanent link">&para;</a></h2>
 <h3 id="component-structure">Component Structure<a class="headerlink" href="#component-structure" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>App.vue
-└── Dashboard.vue
-    ├── DashboardCard.vue (multiple instances)
+└── DashboardView.vue
+    ├── HeaderBar.vue
+    ├── EraCard.vue (multiple instances in grid)
     ├── SidebarPanel.vue (conditionally rendered)
-    └── ReviewPanel.vue (conditionally rendered)
+    └── LeftSidebarNavigation.vue (conditionally rendered)
 </code></pre></div>
 <h3 id="state-dependencies">State Dependencies<a class="headerlink" href="#state-dependencies" title="Permanent link">&para;</a></h3>
 <table>
@@ -1846,41 +1822,48 @@
 </thead>
 <tbody>
 <tr>
-<td>Dashboard</td>
-<td><code>albums</code>, <code>userSelections</code></td>
+<td>DashboardView</td>
+<td><code>eras</code>, <code>userSelections</code></td>
 <td>None</td>
 </tr>
 <tr>
-<td>DashboardCard</td>
-<td><code>album</code>, <code>userSelections[album.id]</code></td>
-<td><code>open-sidebar</code>, <code>edit-rankings</code></td>
+<td>HeaderBar</td>
+<td><code>currentView</code></td>
+<td><code>open-navigation</code>, <code>edit-mode</code></td>
+</tr>
+<tr>
+<td>EraCard</td>
+<td><code>era</code>, <code>userSelections[era.id]</code></td>
+<td><code>open-sidebar</code></td>
 </tr>
 <tr>
 <td>SidebarPanel</td>
-<td><code>selectedAlbum</code>, <code>userSelections[selectedAlbum.id]</code></td>
-<td><code>close</code>, <code>edit-review</code></td>
+<td><code>selectedEra</code>, <code>userSelections[selectedEra.id]</code></td>
+<td><code>close</code>, <code>switch-tab</code>, <code>edit-review</code></td>
 </tr>
 <tr>
-<td>ReviewPanel</td>
-<td><code>selectedAlbum</code>, <code>userSelections[selectedAlbum.id].review</code></td>
-<td><code>save</code>, <code>cancel</code></td>
+<td>LeftSidebarNavigation</td>
+<td><code>currentView</code></td>
+<td><code>navigate</code>, <code>close</code></td>
 </tr>
 </tbody>
 </table>
 <h3 id="common-issues">Common Issues<a class="headerlink" href="#common-issues" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Album cards not rendering</strong>: Check that the <code>albums</code> array is properly loaded</li>
+<li><strong>Era cards not rendering</strong>: Check that the <code>eras</code> array is properly loaded</li>
 <li><strong>Star ratings not displaying</strong>: Verify <code>userSelections</code> object has the correct structure</li>
-<li><strong>Sidebar not opening</strong>: Ensure <code>open-sidebar</code> event is being emitted with the correct album ID</li>
+<li><strong>Sidebar not opening</strong>: Ensure <code>open-sidebar</code> event is being emitted with the correct era ID</li>
+<li><strong>Navigation not working</strong>: Check that event handlers for navigation events are properly connected</li>
 </ul>
-<h2 id="edit-rankings-screen">Edit Rankings Screen<a class="headerlink" href="#edit-rankings-screen" title="Permanent link">&para;</a></h2>
+<h2 id="edit-rankings-view">Edit Rankings View<a class="headerlink" href="#edit-rankings-view" title="Permanent link">&para;</a></h2>
 <h3 id="component-structure_1">Component Structure<a class="headerlink" href="#component-structure_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>App.vue
-└── EditRankings.vue
-    ├── EditRankingsTabs.vue
+└── EditRankingsView.vue
+    ├── HeaderControls.vue
+    ├── SelectionTabs.vue
     │   └── TabContent.vue (multiple instances)
-    ├── DraggableItem.vue (multiple instances)
-    └── ConfirmationModal.vue (conditionally rendered)
+    ├── ItemChip.vue (multiple instances)
+    └── SelectionCounter.vue
 </code></pre></div>
 <h3 id="state-dependencies_1">State Dependencies<a class="headerlink" href="#state-dependencies_1" title="Permanent link">&para;</a></h3>
 <table>
@@ -1893,24 +1876,29 @@
 </thead>
 <tbody>
 <tr>
-<td>EditRankings</td>
-<td><code>selectedAlbum</code>, <code>userSelections[selectedAlbum.id]</code></td>
+<td>EditRankingsView</td>
+<td><code>selectedEra</code>, <code>userSelections</code></td>
 <td>None</td>
 </tr>
 <tr>
-<td>EditRankingsTabs</td>
+<td>HeaderControls</td>
+<td><code>hasChanges</code></td>
+<td><code>save</code>, <code>cancel</code></td>
+</tr>
+<tr>
+<td>SelectionTabs</td>
 <td><code>tabs</code>, <code>activeTab</code></td>
 <td><code>tab-change</code></td>
 </tr>
 <tr>
-<td>DraggableItem</td>
-<td><code>item</code>, <code>isRanked</code></td>
-<td><code>toggle-rank</code>, <code>move-item</code></td>
+<td>ItemChip</td>
+<td><code>item</code>, <code>isSelected</code>, <code>selectionIndex</code></td>
+<td><code>toggle-selection</code></td>
 </tr>
 <tr>
-<td>ConfirmationModal</td>
+<td>SelectionCounter</td>
+<td><code>selectedCount</code>, <code>totalCount</code></td>
 <td>None</td>
-<td><code>confirm</code>, <code>cancel</code></td>
 </tr>
 </tbody>
 </table>

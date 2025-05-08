@@ -483,8 +483,6 @@
       
         
       
-        
-      
     
     
     
@@ -551,29 +549,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../application_overview.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Application Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -625,6 +600,15 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#screen-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screen Overview
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#dashboard-screen" class="md-nav__link">
@@ -1718,13 +1702,12 @@
 
 
 <h1 id="screens-summary">Screens Summary<a class="headerlink" href="#screens-summary" title="Permanent link">&para;</a></h1>
-<p>The Music Besties application consists of two primary screens that provide the main functionality of the application.</p>
-<!-- AI: Add a table showing every screen in the app and quick summary of each in this section -->
-
+<p>The Music Besties application consists of multiple screens and views that provide a comprehensive user experience for organizing and reviewing music.</p>
+<h2 id="screen-overview">Screen Overview<a class="headerlink" href="#screen-overview" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Screen Name</th>
+<th>View</th>
 <th>Primary Purpose</th>
 <th>Key Components</th>
 <th>Navigation Options</th>
@@ -1732,34 +1715,52 @@
 </thead>
 <tbody>
 <tr>
-<td>Dashboard</td>
-<td>Main entry point displaying all albums</td>
-<td>Album cards with ratings, Grid layout, App header</td>
-<td>Click album to open sidebar, Click "Edit Rankings" to navigate to rankings screen</td>
+<td><strong>Dashboard View</strong></td>
+<td>Main entry point displaying music era information</td>
+<td>Era cards grid, Header bar, Selection counter, Rating display, Era emoji, Footer disclaimer</td>
+<td>Open navigation menu, Enter edit mode, View era details</td>
 </tr>
 <tr>
-<td>Edit Rankings</td>
-<td>Interface for ranking songs within an album</td>
-<td>Tabs for different ranking categories, Draggable song items, Ranked/unranked sections</td>
-<td>Back button to Dashboard, Save/Cancel buttons</td>
+<td><strong>Edit Rankings View</strong></td>
+<td>Interface for selecting and ranking items</td>
+<td>Header controls, Tab navigation bar, Selection counter, Instruction text, Item chips, Selection indicators</td>
+<td>Switch tabs, Select/remove items, Change order, Save/cancel changes</td>
 </tr>
 <tr>
-<td>Album Sidebar</td>
-<td>Detailed view of album information</td>
-<td>Album header with emoji, Song list with rankings, User review and rating</td>
-<td>Close button, Edit review button</td>
+<td><strong>Sidebar Panel</strong></td>
+<td>Context-sensitive panel for viewing rankings and reviews</td>
+<td>Panel header, Tab navigation, Rankings list, Star rating display, Review text area, Review form</td>
+<td>Switch sidebar tabs, View rankings, Add/edit review, Close sidebar</td>
 </tr>
 <tr>
-<td>Review Panel</td>
-<td>Interface for adding/editing album reviews</td>
-<td>Star rating selector, Text input for comments, Last updated timestamp</td>
-<td>Save/Cancel buttons</td>
+<td><strong>About View</strong></td>
+<td>Informational content about the application</td>
+<td>Header bar, App description, Version information, Credits section, Text sections</td>
+<td>Read information, Check version, See credits, Return to previous screen</td>
 </tr>
 <tr>
-<td>Confirmation Modal</td>
-<td>Prevents accidental data loss</td>
-<td>Confirmation message, Action buttons</td>
-<td>Confirm/Cancel buttons</td>
+<td><strong>Profile View</strong></td>
+<td>User-specific information and statistics</td>
+<td>Header bar, Profile image, User information, Statistics section, Preferences area</td>
+<td>View profile data, Check activity, Access settings, Return to previous screen</td>
+</tr>
+<tr>
+<td><strong>Settings View</strong></td>
+<td>User preference configuration</td>
+<td>Header bar, Settings categories, Toggle switches, Radio buttons, Dropdown menus, Setting descriptions</td>
+<td>Toggle options, Select preferences, Adjust display settings, Return to previous screen</td>
+</tr>
+<tr>
+<td><strong>Terms/Privacy View</strong></td>
+<td>Legal documentation</td>
+<td>Header bar, Section headers, Legal text, Data usage section, Last updated timestamp</td>
+<td>Read legal information, Review data practices, Return to previous screen</td>
+</tr>
+<tr>
+<td><strong>Left Sidebar Navigation</strong></td>
+<td>Global navigation system</td>
+<td>App branding, Navigation menu, Menu icons, Active indicator, Close button</td>
+<td>Navigate to section, See current location, Close menu, Access all app areas</td>
 </tr>
 </tbody>
 </table>

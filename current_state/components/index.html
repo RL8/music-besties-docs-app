@@ -483,8 +483,6 @@
       
         
       
-        
-      
     
     
     
@@ -537,29 +535,6 @@
   
   <span class="md-ellipsis">
     Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../application_overview.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Application Overview
     
   </span>
   
@@ -658,6 +633,33 @@
   
     <nav class="md-nav" aria-label="Component Hierarchy">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primary Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supporting-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supporting Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigation Components
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#component-dashboardcard" class="md-nav__link">
@@ -1738,30 +1740,60 @@
 <p>The application is structured around these key components, which are implemented in Vue.js:</p>
 <p><strong>Figure: Component Hierarchy</strong></p>
 <pre class="mermaid"><code>flowchart TD
-    App["App.vue\n(Root component)"] --&gt; Dashboard["DashboardCard.vue\n(Multiple instances in grid)"];
-    App --&gt; EditRankings["EditRankingsTabs.vue\n(Ranking interface)"];
-    App --&gt; Sidebar["SidebarPanel.vue\n(Sliding information panel)"];
-    App --&gt; Modal["ModalDialog.vue\n(Reusable confirmation dialogs)"];
+    App["App.vue\n(Root component)"] --&gt; Dashboard["DashboardView.vue\n(Main entry point)"];
+    App --&gt; EditRankings["EditRankingsView.vue\n(Selection interface)"];
+    App --&gt; Sidebar["SidebarPanel.vue\n(Rankings &amp; Reviews)"];
+    App --&gt; Navigation["NavigationSystem.vue\n(Global navigation)"];
 
-    EditRankings --&gt; DraggableItem["DraggableItem.vue\n(Multiple draggable instances)"];
+    Dashboard --&gt; EraCard["EraCard.vue\n(Multiple instances in grid)"];
+
+    EditRankings --&gt; SelectionTabs["SelectionTabs.vue\n(Tab navigation)"];
+    EditRankings --&gt; ItemChips["ItemChip.vue\n(Selectable items)"];
+
+    Sidebar --&gt; RankingsList["RankingsList.vue\n(Ordered list)"];
+    Sidebar --&gt; ReviewForm["ReviewForm.vue\n(Rating &amp; comments)"];
+
+    Navigation --&gt; NavMenu["NavMenu.vue\n(Menu items)"];
+    Navigation --&gt; AboutView["AboutView.vue"];
+    Navigation --&gt; ProfileView["ProfileView.vue"];
+    Navigation --&gt; SettingsView["SettingsView.vue"];
+    Navigation --&gt; TermsView["TermsView.vue"];
 
     %% Add styling for component types
     classDef root fill:#f96,stroke:#333,stroke-width:4px;
-    classDef container fill:#9cf,stroke:#333,stroke-width:2px;
-    classDef item fill:#cfc,stroke:#333,stroke-width:1px;
+    classDef primaryViews fill:#9cf,stroke:#333,stroke-width:2px;
+    classDef supportingViews fill:#cfc,stroke:#333,stroke-width:1px;
+    classDef navSystem fill:#dfd,stroke:#333,stroke-width:1px;
 
     %% Apply classes to nodes
     class App root;
-    class Dashboard,EditRankings,Sidebar,Modal container;
-    class DraggableItem item;</code></pre>
-<p><em>Tree diagram showing the Vue.js component inheritance and composition structure from App.vue down to individual UI elements. Helps developers understand component dependencies and the proper location for implementing new features or modifications.</em></p>
+    class Dashboard,EditRankings,Sidebar primaryViews;
+    class EraCard,SelectionTabs,ItemChips,RankingsList,ReviewForm supportingViews;
+    class Navigation,NavMenu,AboutView,ProfileView,SettingsView,TermsView navSystem;</code></pre>
+<p><em>Tree diagram showing the Vue.js component hierarchy from App.vue down to individual UI elements. This updated diagram reflects the complete application structure including the navigation system and supporting views.</em></p>
+<h3 id="primary-components">Primary Components<a class="headerlink" href="#primary-components" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>App.vue</strong>: The root component that manages routing and global state</li>
-<li><strong>DashboardCard.vue</strong>: Reusable component for album display on the dashboard</li>
-<li><strong>EditRankingsTabs.vue</strong>: Container for the ranking interface with tabs</li>
-<li><strong>DraggableItem.vue</strong>: Interactive component for selection functionality</li>
-<li><strong>SidebarPanel.vue</strong>: Sliding panel for detailed album information</li>
-<li><strong>ModalDialog.vue</strong>: Reusable dialog component for confirmations</li>
+<li><strong>DashboardView.vue</strong>: Main entry point displaying the Era Cards grid</li>
+<li><strong>EditRankingsView.vue</strong>: Interface for selecting and ranking items</li>
+<li><strong>SidebarPanel.vue</strong>: Context-sensitive panel for viewing rankings and managing reviews</li>
+<li><strong>NavigationSystem.vue</strong>: Global navigation system accessible from all views</li>
+</ul>
+<h3 id="supporting-components">Supporting Components<a class="headerlink" href="#supporting-components" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>EraCard.vue</strong>: Reusable component for era display on the dashboard</li>
+<li><strong>SelectionTabs.vue</strong>: Tab navigation for different ranking categories</li>
+<li><strong>ItemChip.vue</strong>: Interactive component for selection functionality</li>
+<li><strong>RankingsList.vue</strong>: Component for displaying ordered rankings</li>
+<li><strong>ReviewForm.vue</strong>: Form component for ratings and comments</li>
+</ul>
+<h3 id="navigation-components">Navigation Components<a class="headerlink" href="#navigation-components" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>NavMenu.vue</strong>: Menu component with navigation links</li>
+<li><strong>AboutView.vue</strong>: View component for application information</li>
+<li><strong>ProfileView.vue</strong>: View component for user profile</li>
+<li><strong>SettingsView.vue</strong>: View component for user settings</li>
+<li><strong>TermsView.vue</strong>: View component for legal information</li>
 </ul>
 <h3 id="component-dashboardcard">Component: DashboardCard<a class="headerlink" href="#component-dashboardcard" title="Permanent link">&para;</a></h3>
 <table>
