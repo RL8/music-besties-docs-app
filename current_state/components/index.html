@@ -616,6 +616,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#review-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review Panel
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1706,7 +1715,8 @@ The Album Sidebar Panel is a sliding panel that provides detailed information ab
 The sidebar panel displays album information in a structured format, with clear sections for songs, ratings, and reviews.
 
 **Figure: Album Sidebar Panel Layout**
-</code></pre></div>
+
+```ascii
 +-----------------------------------------------------+
 |  ← Red ❤️                                          |
 +-----------------------------------------------------+
@@ -1729,27 +1739,26 @@ The sidebar panel displays album information in a structured format, with clear 
 |                                                     |
 | Your Review:                                        |
 | ★★★★★                                              |
-| "This album perfectly captures the emotions of      |
+| &quot;This album perfectly captures the emotions of      |
 | heartbreak and moving on. All Too Well is an        |
-| absolute masterpiece."                              |
+| absolute masterpiece.&quot;                              |
 |                                                     |
 | Last updated: May 5, 2025                           |
 |                                                     |
 +-----------------------------------------------------+
-<div class="highlight"><pre><span></span><code>*Detailed panel structure showing the song ranking interface with numbered positions and the scrollable unranked songs section. Demonstrates how the component handles varying amounts of content through scrolling while maintaining a consistent visual structure.*
-
-## Review Panel
-
-The Review Panel allows users to add and edit reviews for albums. It includes:
-
-- Star rating system (0-5 stars)
-- Text input for comments
-- Save and cancel buttons
-- Timestamp information for when the review was last updated
-
-**Figure: Review Panel Layout**
-</code></pre></div>
-+-----------------------------------------------------+
+</code></pre></div></li>
+</ul>
+<p><em>Detailed panel structure showing the song ranking interface with numbered positions and the scrollable unranked songs section. Demonstrates how the component handles varying amounts of content through scrolling while maintaining a consistent visual structure.</em></p>
+<h2 id="review-panel">Review Panel<a class="headerlink" href="#review-panel" title="Permanent link">&para;</a></h2>
+<p>The Review Panel allows users to add and edit reviews for albums. It includes:</p>
+<ul>
+<li>Star rating system (0-5 stars)</li>
+<li>Text input for comments</li>
+<li>Save and cancel buttons</li>
+<li>Timestamp information for when the review was last updated</li>
+</ul>
+<p><strong>Figure: Review Panel Layout</strong></p>
+<div class="highlight"><pre><span></span><code>+-----------------------------------------------------+
 |  Edit Review: Red ❤️                               |
 +-----------------------------------------------------+
 |                                                     |
@@ -1773,8 +1782,7 @@ The Review Panel allows users to add and edit reviews for albums. It includes:
 | [Save]                [Cancel]                      |
 |                                                     |
 +-----------------------------------------------------+
-```</li>
-</ul>
+</code></pre></div>
 <p><em>Comprehensive view of the star rating system and comment field with timestamp display for album reviews. Shows the expected input mechanisms and data display for the review creation and viewing process.</em></p>
 
 
