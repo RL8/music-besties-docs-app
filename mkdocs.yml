@@ -1,5 +1,6 @@
 site_name: Music Besties Documentation
 site_description: Comprehensive documentation for the Music Besties application
+site_url: https://rl8.github.io/music-besties-docs-app/
 theme:
   name: material
   palette:
