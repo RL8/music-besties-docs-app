@@ -1,0 +1,68 @@
+site_name: Music Besties Documentation
+site_description: Comprehensive documentation for the Music Besties application
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: pink
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - navigation.top
+    - navigation.tracking
+    - navigation.tabs.sticky
+
+nav:
+  - Home: 
+      - Overview: index.md
+      - Diagram Index: diagram_index.md
+  - Current State:
+      - Introduction: current/index.md
+      - Application Overview: current/application_overview.md
+      - Core Screens: current/screens.md
+      - Component Details: current/components.md
+      - User Interactions: current/interactions.md
+      - Technical Implementation: current/technical.md
+      - User Experience: current/user_experience.md
+      - Developer Guide: current/developer_guide.md
+  - Future State:
+      - Roadmap: future/roadmap.md
+      - Planned Features: future/planned_features.md
+      - Version 2.0 Specs: future/v2_specs.md
+  - Design System:
+      - Overview: design_system/index.md
+      - Foundations: design_system/foundations.md
+      - Components: design_system/components.md
+      - Patterns: design_system/patterns.md
+      - Accessibility: design_system/accessibility.md
+      - Responsive Design: design_system/responsive.md
+  - Diagram Comparisons: examples/diagram_comparisons.md
+  - Examples:
+      - Mermaid Diagrams: examples/mermaid_demo.md
+      - Diagram Conversion Plan: examples/diagram_conversion_plan.md
+      - Diagram Repository Demo: examples/diagram_repository_demo.md
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.emoji
+  - admonition
+  - toc:
+      permalink: true
+  - markdown_include.include:
+      base_path: docs
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mermaid@10.2.3/dist/mermaid.min.js
+  - js/mermaid-init.js
+
+plugins:
+  - search
