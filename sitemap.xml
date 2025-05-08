@@ -9,18 +9,6 @@
          <lastmod>2025-05-08</lastmod>
     </url>
     <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/troubleshooting/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/_diagrams/ascii/architecture/application_architecture/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/_diagrams/mermaid/architecture/application_architecture/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
          <loc>https://rl8.github.io/music-besties-docs-app/core_functions/api_documentation/</loc>
          <lastmod>2025-05-08</lastmod>
     </url>
@@ -61,42 +49,6 @@
          <lastmod>2025-05-08</lastmod>
     </url>
     <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/current/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/current/application_overview/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/current/components/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/current/developer_guide/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/current/interactions/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/current/screens/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/current/technical/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/current/user_experience/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/current_state/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
          <loc>https://rl8.github.io/music-besties-docs-app/current_state/application_overview/</loc>
          <lastmod>2025-05-08</lastmod>
     </url>
@@ -129,71 +81,11 @@
          <lastmod>2025-05-08</lastmod>
     </url>
     <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/design_system/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/design_system/accessibility/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/design_system/components/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/design_system/foundations/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/design_system/patterns/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/design_system/responsive/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/examples/diagram_comparisons/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/examples/diagram_conversion_plan/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/examples/diagram_repository_demo/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/examples/mermaid_data_structure/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/examples/mermaid_demo/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/future/planned_features/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/future/roadmap/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/future/v2_specs/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
          <loc>https://rl8.github.io/music-besties-docs-app/future_states/backlog/</loc>
          <lastmod>2025-05-08</lastmod>
     </url>
     <url>
          <loc>https://rl8.github.io/music-besties-docs-app/future_states/vision/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/next_state/</loc>
          <lastmod>2025-05-08</lastmod>
     </url>
     <url>
@@ -210,10 +102,6 @@
     </url>
     <url>
          <loc>https://rl8.github.io/music-besties-docs-app/next_state/interactions/</loc>
-         <lastmod>2025-05-08</lastmod>
-    </url>
-    <url>
-         <loc>https://rl8.github.io/music-besties-docs-app/next_state/patch_history/</loc>
          <lastmod>2025-05-08</lastmod>
     </url>
     <url>
