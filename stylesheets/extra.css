@@ -1,0 +1,66 @@
+/* Custom styling for improved navigation */
+
+/* Indentation for sub-items */
+.md-nav__item .md-nav__item {
+  padding-left: 1rem;
+}
+
+/* Active main item styling */
+.md-nav__item .md-nav__link--active {
+  font-weight: bold;
+  color: var(--md-primary-fg-color);
+}
+
+/* Active sub-item styling */
+.md-nav__item .md-nav__item .md-nav__link--active {
+  font-weight: bold;
+  border-left: 2px solid var(--md-accent-fg-color);
+  padding-left: 0.5rem;
+  margin-left: -0.5rem;
+}
+
+/* Main item icons */
+.md-nav__item .md-nav__link:not(.md-nav__link--active)::before {
+  content: "□ ";
+}
+.md-nav__item .md-nav__link.md-nav__link--active::before {
+  content: "■ ";
+}
+
+/* Sub-item styling */
+.md-nav__item .md-nav__item .md-nav__link::before {
+  content: "├─ ";
+}
+.md-nav__item .md-nav__item:last-child .md-nav__link::before {
+  content: "└─ ";
+}
+
+/* Improve spacing between sections */
+.md-nav__list .md-nav__list {
+  margin-bottom: 0.5rem;
+}
+
+/* Improve readability of section titles */
+.md-nav__item .md-nav__link {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Add subtle hover effect */
+.md-nav__link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+/* Make the navigation slightly wider for better readability */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    width: 16rem;
+  }
+  .md-sidebar--primary .md-sidebar__scrollwrap {
+    width: 16rem;
+  }
+  [dir=ltr] .md-sidebar--primary ~ .md-content {
+    margin-left: 16rem;
+  }
+}
