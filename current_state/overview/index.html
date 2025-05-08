@@ -10,13 +10,9 @@
       
       
       
-        <link rel="canonical" href="https://rl8.github.io/music-besties-docs-app/current_state/application_overview/">
+        <link rel="canonical" href="https://rl8.github.io/music-besties-docs-app/current_state/overview/">
       
       
-        <link rel="prev" href="../../diagram_index/">
-      
-      
-        <link rel="next" href="../screens/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +20,7 @@
     
     
       
-        <title>Application Overview - Music Besties Documentation</title>
+        <title>Overview - Music Besties App - Music Besties Documentation</title>
       
     
     
@@ -120,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Application Overview
+              Overview - Music Besties App
             
           </span>
         </div>
@@ -209,13 +205,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../application_overview.md" class="md-tabs__link">
           
   
   
@@ -462,10 +456,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -487,22 +479,19 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -515,7 +504,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Current State (v1.0)
@@ -526,32 +515,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Application Overview
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../application_overview.md" class="md-nav__link">
         
   
   
@@ -562,53 +529,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#bullet-point-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bullet Point overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#text-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Text Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#high-level-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      High-Level Architecture
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1703,40 +1623,142 @@
 
 <h1 id="overview-music-besties-app">Overview - Music Besties App<a class="headerlink" href="#overview-music-besties-app" title="Permanent link">&para;</a></h1>
 <p>Music Besties is a web application designed to help music enthusiasts organize, rank, and review their favorite albums and songs. The application provides an intuitive interface for creating personalized music collections with custom rankings and detailed reviews.</p>
-<h2 id="bullet-point-overview">Bullet Point overview <!-- AI: Never edit this text --><a class="headerlink" href="#bullet-point-overview" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Purpose</strong>: Personal music collection organization and ranking tool</li>
-<li><strong>Target Users</strong>: Music enthusiasts who enjoy organizing and ranking their music</li>
-<li><strong>Key Features</strong>:</li>
-<li>Album collection management with visual cards</li>
-<li>Song ranking within albums</li>
-<li>Rating and review system</li>
-<li>Intuitive drag-and-drop interface</li>
-<li>Local storage for persistent data</li>
-<li><strong>Technology</strong>: Built with Vue.js frontend framework</li>
-<li><strong>Platforms</strong>: Web-based, responsive design for desktop and mobile</li>
-</ul>
+<h2 id="page-by-page-overview">Page by page overview <!-- AI: Never edit this text --><a class="headerlink" href="#page-by-page-overview" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>View</th>
+<th>UI Elements and Their Purpose</th>
+<th>User Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dashboard View</strong></td>
+<td>• <strong>Header Bar</strong>: Contains app title "My Rankings", hamburger menu icon, and Edit button<br>• <strong>Era Cards Grid</strong>: 2-column (mobile) or 3-column (desktop) grid displaying music era information<br>• <strong>Selection Counter</strong>: Shows number of selected items vs. total (e.g., "2 of 10")<br>• <strong>Rating Display</strong>: Star icons (1-5) showing user ratings when available<br>• <strong>Era Emoji</strong>: Visual icon representing each music era<br>• <strong>Footer Disclaimer</strong>: Text indicating unofficial status of the app</td>
+<td>• <strong>Open navigation menu</strong>: Tap hamburger icon<br>• <strong>Enter edit mode</strong>: Tap Edit button<br>• <strong>View era details</strong>: Tap on any era card<br>• <strong>View rankings</strong>: Scan cards to see current selections<br>• <strong>Check ratings</strong>: View star ratings on cards<br>• <strong>Return to top</strong>: Scroll to beginning of grid</td>
+</tr>
+<tr>
+<td><strong>Edit Rankings View</strong></td>
+<td>• <strong>Header Controls</strong>: Cancel button (red), screen title, Save button (green)<br>• <strong>Tab Navigation Bar</strong>: Horizontally scrollable tabs for "Eras" and individual era names<br>• <strong>Selection Counter</strong>: Shows selected/total count for each tab<br>• <strong>Instruction Text</strong>: Contextual heading explaining selection process<br>• <strong>Item Chips</strong>: Interactive buttons for each selectable item (era or song)<br>• <strong>Selection Indicators</strong>: Blue highlighting and rank numbers (1, 2, 3...) on selected items</td>
+<td>• <strong>Switch tabs</strong>: Tap tab buttons to change category<br>• <strong>Select items</strong>: Tap unselected chips to add to ranking<br>• <strong>Remove selections</strong>: Tap selected chips to remove from ranking<br>• <strong>Change order</strong>: Remove and re-add items to change ranking order<br>• <strong>Save changes</strong>: Tap Save button to persist selections<br>• <strong>Cancel editing</strong>: Tap Cancel to discard changes and return to dashboard</td>
+</tr>
+<tr>
+<td><strong>Sidebar Panel</strong></td>
+<td>• <strong>Panel Header</strong>: Title showing selected era/category name and X close button<br>• <strong>Tab Navigation</strong>: Two tabs - "Rankings" and "Review &amp; Notes"<br>• <strong>Rankings List</strong>: Ordered list of user's ranked items for the selected category<br>• <strong>Star Rating Display</strong>: 1-5 star rating visualization<br>• <strong>Review Text Area</strong>: User's written review/comment when available<br>• <strong>Review Form</strong>: Star selection inputs, text area with 140 char limit, character counter, save/cancel buttons</td>
+<td>• <strong>Switch sidebar tabs</strong>: Tap tab buttons to toggle between rankings and review<br>• <strong>View rankings</strong>: See ordered list of selected items<br>• <strong>Add/edit review</strong>: Tap Edit Review button<br>• <strong>Set rating</strong>: Select star rating (1-5)<br>• <strong>Write comment</strong>: Enter text in comment field (max 140 chars)<br>• <strong>Save review</strong>: Submit rating and comment<br>• <strong>Close sidebar</strong>: Tap X button to return to previous view</td>
+</tr>
+<tr>
+<td><strong>About View</strong></td>
+<td>• <strong>Header Bar</strong>: "About" title and back button<br>• <strong>App Description</strong>: Text explaining app purpose and functionality<br>• <strong>Version Information</strong>: App version number and release notes<br>• <strong>Credits Section</strong>: Developer and contributor information<br>• <strong>Text Sections</strong>: Formatted content with headings and paragraphs</td>
+<td>• <strong>Read information</strong>: Scroll through content sections<br>• <strong>Check version</strong>: View current app version<br>• <strong>See credits</strong>: View developer information<br>• <strong>Return to previous screen</strong>: Tap back button</td>
+</tr>
+<tr>
+<td><strong>Profile View</strong></td>
+<td>• <strong>Header Bar</strong>: "Profile" title and back button<br>• <strong>Profile Image</strong>: User avatar/photo placeholder or image<br>• <strong>User Information</strong>: Display name and account details<br>• <strong>Statistics Section</strong>: Counters for rankings created, reviews written, account age<br>• <strong>Preferences Area</strong>: User-specific settings and options</td>
+<td>• <strong>View profile data</strong>: See account information and statistics<br>• <strong>Check activity</strong>: Review ranking and review history<br>• <strong>Access settings</strong>: Navigate to account-related settings<br>• <strong>Return to previous screen</strong>: Tap back button</td>
+</tr>
+<tr>
+<td><strong>Settings View</strong></td>
+<td>• <strong>Header Bar</strong>: "Settings" title and back button<br>• <strong>Settings Categories</strong>: Grouped options with section headers<br>• <strong>Toggle Switches</strong>: On/off controls for boolean settings<br>• <strong>Radio Buttons</strong>: Selection controls for mutually exclusive options<br>• <strong>Dropdown Menus</strong>: Selection controls for multiple choice options<br>• <strong>Setting Descriptions</strong>: Help text explaining each setting's purpose</td>
+<td>• <strong>Toggle options</strong>: Turn features on/off<br>• <strong>Select preferences</strong>: Choose from available options<br>• <strong>Adjust display settings</strong>: Modify visual preferences<br>• <strong>Manage notifications</strong>: Control notification behavior<br>• <strong>Configure data options</strong>: Set data storage preferences<br>• <strong>Return to previous screen</strong>: Tap back button</td>
+</tr>
+<tr>
+<td><strong>Terms/Privacy View</strong></td>
+<td>• <strong>Header Bar</strong>: "Terms &amp; Privacy" title and back button<br>• <strong>Section Headers</strong>: Titled segments for different legal topics<br>• <strong>Legal Text</strong>: Terms of service and privacy policy content<br>• <strong>Data Usage Section</strong>: Information about how user data is handled<br>• <strong>Last Updated Timestamp</strong>: Date when legal documents were last modified</td>
+<td>• <strong>Read legal information</strong>: Scroll through terms and privacy policy<br>• <strong>Review data practices</strong>: Learn about data handling policies<br>• <strong>Check update date</strong>: See when documents were last updated<br>• <strong>Return to previous screen</strong>: Tap back button</td>
+</tr>
+<tr>
+<td><strong>Left Sidebar Navigation</strong></td>
+<td>• <strong>App Branding</strong>: App name/logo at top of sidebar<br>• <strong>Navigation Menu</strong>: Vertical list of app sections (Dashboard, Profile, Settings, etc.)<br>• <strong>Menu Icons</strong>: Visual icons next to each menu item<br>• <strong>Active Indicator</strong>: Highlighting or styling showing current section<br>• <strong>Close Button</strong>: X button in top corner to dismiss sidebar</td>
+<td>• <strong>Navigate to section</strong>: Tap menu item to go to that screen<br>• <strong>See current location</strong>: Identify active section by highlight<br>• <strong>Close menu</strong>: Tap X button or swipe to dismiss<br>• <strong>Access all app areas</strong>: Reach any major section from one menu</td>
+</tr>
+</tbody>
+</table>
 <h2 id="text-overview">Text Overview <!-- AI: Never edit this text --><a class="headerlink" href="#text-overview" title="Permanent link">&para;</a></h2>
-<p>Music Besties addresses the need for music enthusiasts to organize their thoughts and preferences about music in a structured way. The application allows users to create a visual collection of albums, each with customizable ratings, rankings, and reviews.</p>
-<p>Users can maintain a dashboard of album cards that provides an at-a-glance view of their collection. For each album, users can create detailed song rankings by dragging and dropping songs into their preferred order. The application also supports writing and editing reviews with star ratings to capture thoughts and opinions about each album.</p>
-<p>The interface is designed to be intuitive and visually appealing, with a focus on ease of use and quick access to information. Data is stored locally in the browser, ensuring privacy and eliminating the need for user accounts while maintaining persistence between sessions.</p>
+<p>Music Besties lets you explore, rank, and review your favorite music eras and songs with simple, clear actions.</p>
+<ul>
+<li><strong>Browse and Explore:</strong> On the main screen, you can scroll through cards showing different music eras. Tap any card to see detailed rankings and reviews for that era.</li>
+<li><strong>Edit Your Rankings:</strong> Tap the Edit button to enter ranking mode. Switch between tabs to see different eras or categories. Tap items to add them to your favorites, tap again to remove them, and reorder your picks by removing and re-adding. When you’re happy, save your changes or cancel to keep things as they were.</li>
+<li><strong>View and Write Reviews:</strong> In the sidebar that opens when you select an era, switch between your ranked list and the review tab. You can rate the era with stars, write a short comment, edit your review anytime, and save your feedback.</li>
+<li><strong>Navigate Easily:</strong> Use the hamburger menu to open the sidebar navigation. From there, jump to any major section like Dashboard, Profile, Settings, About, or Terms \&amp; Privacy.</li>
+<li><strong>Manage Your Profile:</strong> View your profile details, see how many rankings and reviews you’ve created, and access your preferences.</li>
+<li><strong>Adjust Settings:</strong> Change app themes, notification preferences, and other options to customize your experience.</li>
+<li><strong>Learn About the App:</strong> Read about the app’s purpose, version info, and credits in the About section.</li>
+<li><strong>Review Legal Info:</strong> Check the Terms \&amp; Privacy section to understand how your data is handled and the app’s policies.</li>
+<li><strong>Close and Return:</strong> Easily close sidebars or menus and return to previous screens whenever you want.</li>
+</ul>
 <h2 id="high-level-architecture">High-Level Architecture<a class="headerlink" href="#high-level-architecture" title="Permanent link">&para;</a></h2>
-<p>Music Besties follows a component-based architecture that promotes modularity, reusability, and maintainability. The application consists of two primary screens with supporting components that work together to create a cohesive user experience.</p>
+<p>Music Besties follows a component-based architecture that promotes modularity, reusability, and maintainability. The application is structured around core views with supporting components that work together to create a cohesive user experience.</p>
+<h3 id="core-application-structure">Core Application Structure<a class="headerlink" href="#core-application-structure" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Primary Views</strong></li>
+<li><strong>Dashboard View</strong>: The main entry point displaying Era Cards in a responsive grid layout with selection counters and rating displays</li>
+<li><strong>Edit Rankings View</strong>: Interactive interface for selecting and ranking items across different categories</li>
+<li><strong>Sidebar Panel</strong>: Context-sensitive panel for viewing rankings and managing reviews</li>
+<li>
+<p><strong>Navigation Sidebar</strong>: Global navigation system accessible from all views</p>
+</li>
+<li>
+<p><strong>Supporting Views</strong></p>
+</li>
+<li><strong>About View</strong>: Informational content about the application</li>
+<li><strong>Profile View</strong>: User-specific information and statistics</li>
+<li><strong>Settings View</strong>: User preference configuration</li>
+<li>
+<p><strong>Terms/Privacy View</strong>: Legal documentation</p>
+</li>
+<li>
+<p><strong>UI Component Hierarchy</strong></p>
+</li>
+<li><strong>Global Components</strong>: Header bars, navigation elements, and footer disclaimers</li>
+<li><strong>Content Components</strong>: Era cards, item chips, selection indicators, and rating displays</li>
+<li><strong>Interactive Elements</strong>: Buttons, tabs, toggles, and form inputs</li>
+</ol>
+<h3 id="data-flow-architecture">Data Flow Architecture<a class="headerlink" href="#data-flow-architecture" title="Permanent link">&para;</a></h3>
+<p>The application implements a unidirectional data flow pattern:
+- User selections and rankings are stored and retrieved from a persistent data layer
+- UI state changes (like entering edit mode) are managed through state containers
+- Reviews and ratings follow a create-read-update pattern with validation</p>
 <p><strong>Figure: Application Architecture</strong></p>
 <pre class="mermaid"><code>flowchart TD
     subgraph MusicBesties["Music Besties Application"]
-        Dashboard["Dashboard Screen\n(Main application view)"] &lt;--"Navigate between\nscreens"--&gt; EditRankings["Edit Rankings Screen\n(Drag &amp; drop interface)"];
+        Dashboard["Dashboard View\n(Era Cards Grid)"] &lt;--"Navigate between\nscreens"--&gt; EditRankings["Edit Rankings View\n(Selection Interface)"];
 
-        Dashboard --&gt;|"View album\ndetails"| AlbumSidebar["Album Sidebar Panel\n(Song lists, ratings, reviews)"];
-        EditRankings --&gt;|"Confirm\nactions"| ConfirmationModal["Confirmation Modal\n(Save/discard changes)"];
+        Dashboard --&gt;|"View details"| SidebarPanel["Sidebar Panel\n(Rankings &amp; Reviews)"];
+        EditRankings --&gt;|"Save/Cancel"| Dashboard;
 
-        classDef screens fill:#f9f,stroke:#333,stroke-width:2px;
-        classDef components fill:#bbf,stroke:#333,stroke-width:1px;
+        subgraph Navigation["Navigation System"]
+            NavSidebar["Left Sidebar Navigation"]
+            AboutView["About View"]
+            ProfileView["Profile View"]
+            SettingsView["Settings View"]
+            TermsView["Terms/Privacy View"]
+        end
 
-        class Dashboard,EditRankings screens;
-        class AlbumSidebar,ConfirmationModal components;
+        Dashboard &lt;--&gt; NavSidebar;
+        NavSidebar --&gt;|"Navigate to"| AboutView;
+        NavSidebar --&gt;|"Navigate to"| ProfileView;
+        NavSidebar --&gt;|"Navigate to"| SettingsView;
+        NavSidebar --&gt;|"Navigate to"| TermsView;
+
+        classDef primaryViews fill:#f9f,stroke:#333,stroke-width:2px;
+        classDef supportingViews fill:#bbf,stroke:#333,stroke-width:1px;
+        classDef navSystem fill:#dfd,stroke:#333,stroke-width:1px;
+
+        class Dashboard,EditRankings,SidebarPanel primaryViews;
+        class AboutView,ProfileView,SettingsView,TermsView supportingViews;
+        class NavSidebar,Navigation navSystem;
     end</code></pre>
-<p><em>Visual representation of the component relationships showing how the Dashboard and Edit Rankings screens interact with supporting panels. Provides developers with a clear understanding of the application's structural organization and navigation flow between major components.</em></p>
+<p><em>Visual representation of the application's structural organization showing the relationships between primary views, supporting views, and the navigation system. The diagram illustrates how users move between different screens and access functionality through the unified interface.</em></p>
+<h3 id="technical-implementation-considerations">Technical Implementation Considerations<a class="headerlink" href="#technical-implementation-considerations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Responsive Design</strong>: The UI adapts between mobile (2-column) and desktop (3-column) layouts</li>
+<li><strong>State Management</strong>: Tracks selections, rankings, and review content across view transitions</li>
+<li><strong>Navigation Patterns</strong>: Implements hierarchical navigation with breadcrumb-style return paths</li>
+<li><strong>Data Persistence</strong>: Maintains user rankings and reviews between sessions</li>
+<li><strong>Accessibility</strong>: Incorporates clear visual indicators and semantic structure</li>
+</ul>
 
 
 
