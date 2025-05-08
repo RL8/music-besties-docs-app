@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://rl8.github.io/music-besties-docs-app/current_state/patch_history/">
+        <link rel="canonical" href="https://rl8.github.io/music-besties-docs-app/current_state/user_interactions/">
       
       
-        <link rel="prev" href="../developer_guide/">
+        <link rel="prev" href="../components/">
       
       
-        <link rel="next" href="../../sprint/sprint_plan/">
+        <link rel="next" href="../data_handling/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Patch History - Music Besties Documentation</title>
+        <title>User Interactions - Music Besties Documentation</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#patch-history" class="md-skip">
+        <a href="#user-interactions" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Patch History
+              User Interactions
             
           </span>
         </div>
@@ -565,10 +565,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../interactions/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    User Interactions
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -579,6 +601,134 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ranking-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ranking Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ranking Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#album-ranking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Album Ranking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#song-ranking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Song Ranking
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Review Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creatingediting-reviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating/Editing Reviews
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-reviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Reviews
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navigation-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigation Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Navigation Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dashboard Navigation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-rankings-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edit Rankings Navigation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sidebar-panel-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sidebar Panel Navigation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -591,12 +741,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../technical/" class="md-nav__link">
+      <a href="../data_handling/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Technical Implementation
+    Data Management
     
   </span>
   
@@ -637,157 +787,17 @@
   
   
     <li class="md-nav__item">
-      <a href="../developer_guide/" class="md-nav__link">
+      <a href="../developer_debugger/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Developer Guide
+    Developer Debugger
     
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Patch History
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Patch History
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#patch-v101-yyyy-mm-dd" class="md-nav__link">
-    <span class="md-ellipsis">
-      Patch v1.0.1 (YYYY-MM-DD)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Patch v1.0.1 (YYYY-MM-DD)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Changes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bug-fixes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bug Fixes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#known-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      Known Issues
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patch-v100-yyyy-mm-dd" class="md-nav__link">
-    <span class="md-ellipsis">
-      Patch v1.0.0 (YYYY-MM-DD)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Patch v1.0.0 (YYYY-MM-DD)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#initial-release" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initial Release
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#known-issues_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Known Issues
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1642,6 +1652,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core_functions/version_control_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Version Control Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1665,34 +1698,95 @@
 
 
 
-<h1 id="patch-history">Patch History<a class="headerlink" href="#patch-history" title="Permanent link">&para;</a></h1>
-<p>This document tracks all patches and updates applied to the current version (v1.0) of the Music Besties application.</p>
-<h2 id="patch-v101-yyyy-mm-dd">Patch v1.0.1 (YYYY-MM-DD)<a class="headerlink" href="#patch-v101-yyyy-mm-dd" title="Permanent link">&para;</a></h2>
-<h3 id="changes">Changes<a class="headerlink" href="#changes" title="Permanent link">&para;</a></h3>
+<h1 id="user-interactions">User Interactions<a class="headerlink" href="#user-interactions" title="Permanent link">&para;</a></h1>
+<p>This section shows all possible ways users can interact with the app <!-- AI: Never edit this text --></p>
+<h2 id="ranking-workflow">Ranking Workflow<a class="headerlink" href="#ranking-workflow" title="Permanent link">&para;</a></h2>
+<p><strong>Figure: Ranking Interaction Flow</strong></p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User
+    participant UI as Ranking Interface
+    participant State as Application State
+
+    Note over User,State: Step 1: Initial State
+    Note over UI: Ranked: (empty)&lt;br&gt;Unranked: Item A, Item B, Item C
+
+    User-&gt;&gt;UI: Taps Item B
+    UI-&gt;&gt;State: toggleItemRank("B")
+    State--&gt;&gt;UI: Update ranked/unranked lists
+    Note over User,State: Step 2: After tapping Item B
+    Note over UI: Ranked: 1. Item B&lt;br&gt;Unranked: Item A, Item C
+
+    User-&gt;&gt;UI: Taps Item A
+    UI-&gt;&gt;State: toggleItemRank("A")
+    State--&gt;&gt;UI: Update ranked/unranked lists
+    Note over User,State: Step 3: After tapping Item A
+    Note over UI: Ranked: 1. Item B, 2. Item A&lt;br&gt;Unranked: Item C
+
+    User-&gt;&gt;UI: Taps Item B again
+    UI-&gt;&gt;State: toggleItemRank("B")
+    State--&gt;&gt;UI: Remove from ranking, adjust positions
+    Note over User,State: Step 4: After tapping Item B again
+    Note over UI: Ranked: 1. Item A&lt;br&gt;Unranked: Item B, Item C</code></pre>
+<p><em>Step-by-step visualization of how items transition between ranked and unranked states through user tap interactions. Clarifies the exact behavior expected when users interact with rankable items, including the visual state changes.</em></p>
+<h3 id="album-ranking">Album Ranking<a class="headerlink" href="#album-ranking" title="Permanent link">&para;</a></h3>
+<p>The album ranking workflow allows users to create a personalized ranking of their favorite albums. The process works as follows:</p>
+<ol>
+<li>User navigates to the Edit Rankings Screen</li>
+<li>User selects the "Albums" tab</li>
+<li>User taps on unranked albums to add them to the ranked list</li>
+<li>User can reorder ranked albums by dragging and dropping</li>
+<li>User taps on ranked albums to remove them from the ranking</li>
+<li>User saves changes to persist the ranking</li>
+</ol>
+<h3 id="song-ranking">Song Ranking<a class="headerlink" href="#song-ranking" title="Permanent link">&para;</a></h3>
+<p>The song ranking workflow allows users to create a personalized ranking of songs within an album. The process works as follows:</p>
+<ol>
+<li>User navigates to the Edit Rankings Screen</li>
+<li>User selects an album-specific tab</li>
+<li>User taps on unranked songs to add them to the ranked list</li>
+<li>User can reorder ranked songs by dragging and dropping</li>
+<li>User taps on ranked songs to remove them from the ranking</li>
+<li>User saves changes to persist the ranking</li>
+</ol>
+<h2 id="review-workflow">Review Workflow<a class="headerlink" href="#review-workflow" title="Permanent link">&para;</a></h2>
+<h3 id="creatingediting-reviews">Creating/Editing Reviews<a class="headerlink" href="#creatingediting-reviews" title="Permanent link">&para;</a></h3>
+<p>The review creation workflow allows users to add ratings and comments to albums. The process works as follows:</p>
+<ol>
+<li>User navigates to the Dashboard Screen</li>
+<li>User taps on an album to open the Sidebar Panel</li>
+<li>User taps on the review section</li>
+<li>User sets a star rating (0-5 stars)</li>
+<li>User adds a text comment (optional)</li>
+<li>User saves the review to persist the changes</li>
+</ol>
+<h3 id="viewing-reviews">Viewing Reviews<a class="headerlink" href="#viewing-reviews" title="Permanent link">&para;</a></h3>
+<p>Users can view reviews for albums through the Sidebar Panel. The process works as follows:</p>
+<ol>
+<li>User navigates to the Dashboard Screen</li>
+<li>User taps on an album to open the Sidebar Panel</li>
+<li>The review section displays the current rating and comment</li>
+<li>User can tap on the review section to edit the review</li>
+</ol>
+<h2 id="navigation-patterns">Navigation Patterns<a class="headerlink" href="#navigation-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="dashboard-navigation">Dashboard Navigation<a class="headerlink" href="#dashboard-navigation" title="Permanent link">&para;</a></h3>
+<p>The Dashboard Screen provides the following navigation options:</p>
 <ul>
-<li>[Description of change 1]</li>
-<li>[Description of change 2]</li>
+<li>Tapping on an album card opens the Sidebar Panel for that album</li>
+<li>Tapping on the ranking button navigates to the Edit Rankings Screen</li>
 </ul>
-<h3 id="bug-fixes">Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permanent link">&para;</a></h3>
+<h3 id="edit-rankings-navigation">Edit Rankings Navigation<a class="headerlink" href="#edit-rankings-navigation" title="Permanent link">&para;</a></h3>
+<p>The Edit Rankings Screen provides the following navigation options:</p>
 <ul>
-<li>[Description of bug fix 1]</li>
-<li>[Description of bug fix 2]</li>
+<li>Tabs at the top allow switching between different ranking categories</li>
+<li>The back button returns to the Dashboard Screen</li>
+<li>The save button persists changes and returns to the Dashboard Screen</li>
 </ul>
-<h3 id="known-issues">Known Issues<a class="headerlink" href="#known-issues" title="Permanent link">&para;</a></h3>
+<h3 id="sidebar-panel-navigation">Sidebar Panel Navigation<a class="headerlink" href="#sidebar-panel-navigation" title="Permanent link">&para;</a></h3>
+<p>The Sidebar Panel provides the following navigation options:</p>
 <ul>
-<li>[Description of known issue 1]</li>
-<li>[Description of known issue 2]</li>
-</ul>
-<h2 id="patch-v100-yyyy-mm-dd">Patch v1.0.0 (YYYY-MM-DD)<a class="headerlink" href="#patch-v100-yyyy-mm-dd" title="Permanent link">&para;</a></h2>
-<h3 id="initial-release">Initial Release<a class="headerlink" href="#initial-release" title="Permanent link">&para;</a></h3>
-<ul>
-<li>[Description of initial features]</li>
-<li>[Description of initial functionality]</li>
-</ul>
-<h3 id="known-issues_1">Known Issues<a class="headerlink" href="#known-issues_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li>[Description of known issue 1]</li>
-<li>[Description of known issue 2]</li>
+<li>The close button closes the panel and returns to the Dashboard Screen</li>
+<li>Tabs at the top allow switching between different albums</li>
+<li>The edit button navigates to the Edit Rankings Screen for the current album</li>
 </ul>
 
 

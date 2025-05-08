@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://rl8.github.io/music-besties-docs-app/current_state/developer_guide/">
+        <link rel="canonical" href="https://rl8.github.io/music-besties-docs-app/current_state/data_handling/">
       
       
-        <link rel="prev" href="../user_experience/">
+        <link rel="prev" href="../user_interactions/">
       
       
-        <link rel="next" href="../patch_history/">
+        <link rel="next" href="../user_experience/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Developer Guide - Music Besties Documentation</title>
+        <title>Data Management - Music Besties Documentation</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#developer-implementation-guide" class="md-skip">
+        <a href="#data-management" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Developer Guide
+              Data Management
             
           </span>
         </div>
@@ -568,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interactions/" class="md-nav__link">
+      <a href="../user_interactions/" class="md-nav__link">
         
   
   
@@ -588,20 +588,119 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../technical/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Data Management
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Technical Implementation
+    Data Management
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      State Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storage Mechanisms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Storage Mechanisms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#localstorage" class="md-nav__link">
+    <span class="md-ellipsis">
+      LocalStorage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-memory-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      In-memory State
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -634,134 +733,15 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Developer Guide
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Developer Guide
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#implementation-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implementation Checklist
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-flow-implementation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Flow Implementation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#interaction-implementation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Interaction Implementation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#performance-considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Performance Considerations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#accessibility-guidelines" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accessibility Guidelines
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code-style-and-conventions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Code Style and Conventions
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
-      <a href="../patch_history/" class="md-nav__link">
+      <a href="../developer_debugger/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Patch History
+    Developer Debugger
     
   </span>
   
@@ -1621,6 +1601,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core_functions/version_control_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Version Control Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1644,98 +1647,113 @@
 
 
 
-<h1 id="developer-implementation-guide">Developer Implementation Guide<a class="headerlink" href="#developer-implementation-guide" title="Permanent link">&para;</a></h1>
-<p>This section provides guidelines and best practices for developers working on the Music Besties application.</p>
-<h2 id="implementation-checklist">Implementation Checklist<a class="headerlink" href="#implementation-checklist" title="Permanent link">&para;</a></h2>
-<p>When implementing new features or modifying existing components, use this checklist to ensure consistency:</p>
-<p><strong>Figure: Implementation Checklist</strong></p>
-<div class="highlight"><pre><span></span><code>+----------------------------------+
-| Implementation Checklist         |
-+----------------------------------+
-| ☐ Component props validated      |
-| ☐ Event handlers connected       |
-| ☐ LocalStorage updates confirmed |
-| ☐ Responsive behavior tested     |
-| ☐ Accessibility requirements met |
-| ☐ State management integrated    |
-+----------------------------------+
-</code></pre></div>
-<p><em>Comprehensive verification steps for ensuring all aspects of component implementation meet application standards. Serves as a quality assurance tool for developers to validate their implementation against established requirements.</em></p>
-<h2 id="data-flow-implementation">Data Flow Implementation<a class="headerlink" href="#data-flow-implementation" title="Permanent link">&para;</a></h2>
-<p>The application's data flow is implemented as follows:</p>
-<p><strong>Figure: Data Flow Implementation</strong></p>
-<pre class="mermaid"><code>flowchart LR
-    UserAction["User Action\n(tap, drag, input)"] --&gt;|"Triggers"| VueMethods["Vue Methods\n(event handlers)"];
-    VueMethods --&gt;|"Commits changes to"| StateUpdate["State Update\n(reactive data)"];
+<h1 id="data-management">Data management<a class="headerlink" href="#data-management" title="Permanent link">&para;</a></h1>
+<p>This section details the technical implementation of the Music Besties application.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<!-- AI: Add relevant and concise text in this section about the application's data structure -->
 
-    StateUpdate --&gt;|"Persists data to"| LocalStorage["LocalStorage\n(browser cache)"];
-    StateUpdate --&gt;|"Reactively updates"| UIUpdate["UI Update\n(DOM changes)"];
-    UserAction --&gt;|"Observes"| UIUpdate;
+<p>Music Besties uses a structured data model to organize album and song information. The application maintains two primary types of data:</p>
+<ol>
+<li><strong>Static Album Data</strong>: Pre-defined information about albums including identifiers, titles, and song lists</li>
+<li><strong>User Preference Data</strong>: User-generated content including rankings, ratings, and reviews</li>
+</ol>
+<p>The data structure is designed to be lightweight and efficient, with a focus on maintaining a clear separation between core album data and user-specific preferences. This separation allows the application to reset user data without affecting the underlying album information if needed.</p>
+<p>All data is stored locally in the browser's LocalStorage, structured as JSON objects for easy serialization and retrieval. The application uses a reactive state management approach to ensure that UI components automatically update when the underlying data changes.</p>
+<p><strong>Figure: Data Structure Model</strong></p>
+<pre class="mermaid"><code>classDiagram
+    class AlbumObject {
+        &lt;&lt;Core Data&gt;&gt;
+        String id
+        String name
+        String emoji
+        Array~String~ songs
+        +getSongCount() int
+        +getFormattedTitle() String
+    }
 
-    %% Add styling
-    classDef action fill:#f96,stroke:#333,stroke-width:2px;
-    classDef process fill:#9cf,stroke:#333,stroke-width:2px;
-    classDef storage fill:#fd7,stroke:#333,stroke-width:2px;
-    classDef display fill:#9f9,stroke:#333,stroke-width:2px;
+    class UserSelections {
+        &lt;&lt;User Preferences&gt;&gt;
+        String albumId
+        Array~String~ selectedSongs
+        Array~String~ rankOrder
+        +addToRanking(songId) void
+        +removeFromRanking(songId) void
+        +moveInRanking(songId, newPosition) void
+    }
 
-    class UserAction action;
-    class VueMethods,StateUpdate process;
-    class LocalStorage storage;
-    class UIUpdate display;</code></pre>
-<p><em>Technical process diagram showing the complete cycle from user actions through Vue methods to state updates and UI rendering. Illustrates the expected implementation pattern for maintaining data consistency between user interactions and persistent storage.</em></p>
-<p>Key methods involved in this flow include:
-- <code>toggleItemRank()</code>: Updates ranking order when an item is tapped
-- <code>saveAndExit()</code>: Persists changes to LocalStorage and returns to dashboard
-- <code>setup()</code>: Initializes state from LocalStorage on component mount
-- <code>updateReview()</code>: Saves review changes to LocalStorage</p>
-<h2 id="interaction-implementation">Interaction Implementation<a class="headerlink" href="#interaction-implementation" title="Permanent link">&para;</a></h2>
-<p>The ranking functionality is implemented through click/tap handlers:</p>
-<p><strong>Figure: Ranking Interaction Implementation</strong></p>
-<div class="highlight"><pre><span></span><code>+----------------------------------+
-| Ranking Interaction              |
-+----------------------------------+
-| Implementation:                  |
-| - Click handler: toggleItemRank()|
-| - State update: Updates array    |
-|   order in currentSelectionOrders|
-| - Visual feedback: Applies       |
-|   .chip-rank-indicator class     |
-|   with position number           |
-+----------------------------------+
-</code></pre></div>
-<p><em>Technical details of how the ranking interaction is implemented in code, including the specific methods, state updates, and CSS classes involved. Provides developers with concrete implementation guidance for maintaining or extending the ranking functionality.</em></p>
-<p>The star rating system is implemented using:
-- Whole star characters (★ and ☆)
-- Click handlers to set the rating value (1-5)
-- Visual feedback showing the selected rating</p>
-<h2 id="performance-considerations">Performance Considerations<a class="headerlink" href="#performance-considerations" title="Permanent link">&para;</a></h2>
-<p>For optimal performance when implementing new features:</p>
-<ol>
-<li>Minimize DOM manipulations</li>
-<li>Use Vue's reactive system for state changes</li>
-<li>Implement proper cleanup in component unmount hooks</li>
-<li>Leverage browser caching for LocalStorage data</li>
-<li>Keep the bundle size small by avoiding unnecessary dependencies</li>
-</ol>
-<h2 id="accessibility-guidelines">Accessibility Guidelines<a class="headerlink" href="#accessibility-guidelines" title="Permanent link">&para;</a></h2>
-<p>To ensure the application is accessible to all users:</p>
-<ol>
-<li>Use semantic HTML elements</li>
-<li>Provide appropriate ARIA attributes</li>
-<li>Ensure keyboard navigation works for all interactive elements</li>
-<li>Maintain sufficient color contrast</li>
-<li>Test with screen readers</li>
-</ol>
-<h2 id="code-style-and-conventions">Code Style and Conventions<a class="headerlink" href="#code-style-and-conventions" title="Permanent link">&para;</a></h2>
-<p>Follow these conventions to maintain code consistency:</p>
-<ol>
-<li>Use camelCase for variable and function names</li>
-<li>Use PascalCase for component names</li>
-<li>Use kebab-case for CSS class names</li>
-<li>Document component props and events</li>
-<li>Use descriptive names for functions and variables</li>
-</ol>
-<p>By following these implementation guidelines, developers can maintain consistency with the existing codebase while ensuring the application remains performant and maintainable.</p>
+    class UserReviews {
+        &lt;&lt;User Content&gt;&gt;
+        String albumId
+        Number rating
+        String comment
+        DateTime timestamp
+        +updateRating(newRating) void
+        +updateComment(newComment) void
+    }
+
+    AlbumObject "1" --o "0..1" UserSelections : references &gt;
+    AlbumObject "1" --o "0..1" UserReviews : references &gt;</code></pre>
+<p><em>Conceptual diagram showing the relationships and composition of album objects, user selections, and review data. Provides developers with an understanding of the data architecture to properly implement state management.</em></p>
+<h3 id="state-structure">State Structure<a class="headerlink" href="#state-structure" title="Permanent link">&para;</a></h3>
+<p>The application's state is stored in LocalStorage with this structure:</p>
+<p><strong>Figure: LocalStorage Data Structure</strong></p>
+<pre class="mermaid"><code>erDiagram
+    LOCALSTORAGE ||--o{ ALBUM_DATA : stores
+
+    LOCALSTORAGE {
+        string key "music-besties-data"
+        object value
+    }
+
+    ALBUM_DATA {
+        object selectedSongs
+        object rankings
+        object reviews
+    }
+
+    ALBUM_DATA ||--o{ SELECTED_SONGS : contains
+    ALBUM_DATA ||--o{ RANKINGS : contains
+    ALBUM_DATA ||--o{ REVIEWS : contains
+
+    SELECTED_SONGS {
+        string albumId
+        array songList
+    }
+
+    RANKINGS {
+        string categoryId
+        array orderedItems
+    }
+
+    REVIEWS {
+        string albumId
+        number rating
+        string comment
+        datetime timestamp
+    }</code></pre>
+<p><em>Exact JSON structure showing the format of stored data including selectedSongs, rankings, and reviews with their nested properties. Ensures consistent data persistence implementation with the correct property names and data types.</em></p>
+<p>This structure is accessed via the key 'music-besties-data' in the browser's LocalStorage. The application loads this data on startup and updates it when changes are made to rankings or reviews.</p>
+<h2 id="storage-mechanisms">Storage Mechanisms<a class="headerlink" href="#storage-mechanisms" title="Permanent link">&para;</a></h2>
+<h3 id="localstorage">LocalStorage<a class="headerlink" href="#localstorage" title="Permanent link">&para;</a></h3>
+<p>The application uses the browser's LocalStorage API to persist user data between sessions. This approach has the following advantages:</p>
+<ul>
+<li>No server-side storage requirements</li>
+<li>Data remains available even when offline</li>
+<li>Simple API for storing and retrieving JSON data</li>
+</ul>
+<p>However, it also has limitations:</p>
+<ul>
+<li>Limited storage capacity (typically 5-10MB)</li>
+<li>Data is specific to a browser and device</li>
+<li>No synchronization between devices</li>
+</ul>
+<h3 id="in-memory-state">In-memory State<a class="headerlink" href="#in-memory-state" title="Permanent link">&para;</a></h3>
+<p>During runtime, the application maintains an in-memory state that is synchronized with LocalStorage. This approach provides:</p>
+<ul>
+<li>Fast access to data during user interactions</li>
+<li>Ability to make temporary changes before persisting</li>
+<li>Simplified state management through Vue.js reactivity</li>
+</ul>
 
 
 

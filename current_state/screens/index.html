@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#core-screens" class="md-skip">
+        <a href="#screens-summary" class="md-skip">
           Skip to content
         </a>
       
@@ -628,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interactions/" class="md-nav__link">
+      <a href="../user_interactions/" class="md-nav__link">
         
   
   
@@ -651,12 +651,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../technical/" class="md-nav__link">
+      <a href="../data_handling/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Technical Implementation
+    Data Management
     
   </span>
   
@@ -697,35 +697,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../developer_guide/" class="md-nav__link">
+      <a href="../developer_debugger/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Developer Guide
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../patch_history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Patch History
+    Developer Debugger
     
   </span>
   
@@ -1585,6 +1562,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core_functions/version_control_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Version Control Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1608,8 +1608,52 @@
 
 
 
-<h1 id="core-screens">Core Screens<a class="headerlink" href="#core-screens" title="Permanent link">&para;</a></h1>
+<h1 id="screens-summary">Screens Summary<a class="headerlink" href="#screens-summary" title="Permanent link">&para;</a></h1>
 <p>The Music Besties application consists of two primary screens that provide the main functionality of the application.</p>
+<!-- AI: Add a table showing every screen in the app and quick summary of each in this section -->
+
+<table>
+<thead>
+<tr>
+<th>Screen Name</th>
+<th>Primary Purpose</th>
+<th>Key Components</th>
+<th>Navigation Options</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dashboard</td>
+<td>Main entry point displaying all albums</td>
+<td>Album cards with ratings, Grid layout, App header</td>
+<td>Click album to open sidebar, Click "Edit Rankings" to navigate to rankings screen</td>
+</tr>
+<tr>
+<td>Edit Rankings</td>
+<td>Interface for ranking songs within an album</td>
+<td>Tabs for different ranking categories, Draggable song items, Ranked/unranked sections</td>
+<td>Back button to Dashboard, Save/Cancel buttons</td>
+</tr>
+<tr>
+<td>Album Sidebar</td>
+<td>Detailed view of album information</td>
+<td>Album header with emoji, Song list with rankings, User review and rating</td>
+<td>Close button, Edit review button</td>
+</tr>
+<tr>
+<td>Review Panel</td>
+<td>Interface for adding/editing album reviews</td>
+<td>Star rating selector, Text input for comments, Last updated timestamp</td>
+<td>Save/Cancel buttons</td>
+</tr>
+<tr>
+<td>Confirmation Modal</td>
+<td>Prevents accidental data loss</td>
+<td>Confirmation message, Action buttons</td>
+<td>Confirm/Cancel buttons</td>
+</tr>
+</tbody>
+</table>
 <h2 id="dashboard-screen">Dashboard Screen<a class="headerlink" href="#dashboard-screen" title="Permanent link">&para;</a></h2>
 <p>The Dashboard Screen is the main entry point of the application. It displays a grid of album cards, each representing an album that the user can interact with.</p>
 <p><strong>Figure: Dashboard Screen Layout</strong></p>
