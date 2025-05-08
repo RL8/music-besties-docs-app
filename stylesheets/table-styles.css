@@ -1,0 +1,78 @@
+/* Enhanced Table Styling */
+
+/* Basic table styling */
+.md-typeset table:not([class]) {
+  font-size: 0.9rem;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Header styling */
+.md-typeset table:not([class]) th {
+  background-color: #e0e7ff;
+  color: #1e40af;
+  font-weight: bold;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid #c7d2fe;
+}
+
+/* Alternating row colors */
+.md-typeset table:not([class]) tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.md-typeset table:not([class]) tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Cell styling */
+.md-typeset table:not([class]) td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+/* Hover effect */
+.md-typeset table:not([class]) tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* Last row styling */
+.md-typeset table:not([class]) tr:last-child td {
+  border-bottom: none;
+}
+
+/* Table caption styling */
+.md-typeset table:not([class]) + p em {
+  display: block;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+  border-left: 3px solid #e2e8f0;
+}
+
+/* Category column styling (first column) */
+.md-typeset table:not([class]) td:first-child strong {
+  color: #4f46e5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .md-typeset table:not([class]) {
+    display: block;
+    overflow-x: auto;
+    font-size: 0.85rem;
+  }
+  
+  .md-typeset table:not([class]) th,
+  .md-typeset table:not([class]) td {
+    padding: 0.5rem 0.75rem;
+  }
+}

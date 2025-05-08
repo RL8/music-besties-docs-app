@@ -1,22 +1,50 @@
-// Initialize Mermaid with consistent styling
+// Initialize Mermaid with consistent styling and enhanced diagram-specific themes
 document.addEventListener('DOMContentLoaded', function() {
   mermaid.initialize({
     theme: 'neutral',
     themeVariables: {
-      primaryColor: '#5D87E1',
-      primaryTextColor: '#fff',
-      primaryBorderColor: '#5D87E1',
-      lineColor: '#5D87E1',
-      secondaryColor: '#FF8A65',
-      tertiaryColor: '#82B1FF'
+      // Common styling for all diagrams
+      primaryColor: '#3b82f6',
+      primaryTextColor: '#1f2937',
+      primaryBorderColor: '#3b82f6',
+      lineColor: '#64748b',
+      secondaryColor: '#f97316',
+      tertiaryColor: '#8b5cf6',
+      
+      // Architecture diagram colors (flowcharts)
+      flowchartMainBkg: '#f4f6f8',
+      flowchartBorder: '#d1d5db',
+      
+      // Data structure diagram colors (class/er diagrams)
+      classBkg: '#eef2ff',
+      classBorder: '#6366f1',
+      erBkg: '#f0f9ff',
+      erBorder: '#0ea5e9',
+      
+      // User flow diagram colors (sequence diagrams)
+      sequenceBkg: '#f0fdf4',
+      sequenceNumberBkg: '#10b981',
+      sequenceBoxBkgColor: '#ecfdf5',
+      sequenceBoxBorderColor: '#10b981',
+      
+      // Text and font settings
+      fontSize: '14px',
+      noteTextColor: '#1e293b'
     },
     flowchart: {
       curve: 'basis',
-      htmlLabels: true
+      htmlLabels: true,
+      padding: 15
     },
     sequence: {
       actorMargin: 50,
-      mirrorActors: false
+      mirrorActors: false,
+      bottomMarginAdj: 10,
+      useMaxWidth: true
+    },
+    er: {
+      layoutDirection: 'TB',
+      entityPadding: 15
     },
     fontFamily: 'Roboto, sans-serif'
   });

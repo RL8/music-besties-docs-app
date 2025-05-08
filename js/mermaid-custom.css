@@ -3,15 +3,31 @@
 /* General diagram styling */
 .mermaid {
   font-family: 'Roboto', sans-serif;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
+  border-radius: 6px;
+  padding: 1rem;
+  background-color: rgba(248, 250, 252, 0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-/* Node styling */
+/* Diagram caption styling */
+.mermaid-caption {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-style: italic;
+  margin-top: 0.75rem;
+  padding-left: 1rem;
+  border-left: 3px solid #e2e8f0;
+}
+
+/* Node styling with enhanced interactivity */
 .mermaid .node rect,
 .mermaid .node circle,
 .mermaid .node ellipse,
-.mermaid .node polygon {
+.mermaid .node polygon,
+.mermaid .cluster rect {
   transition: all 0.3s ease;
+  stroke-width: 1.5px;
 }
 
 .mermaid .node:hover rect,
@@ -19,15 +35,58 @@
 .mermaid .node:hover ellipse,
 .mermaid .node:hover polygon {
   filter: brightness(1.05);
+  transform: scale(1.02);
+  cursor: pointer;
 }
 
 /* Edge styling */
 .mermaid .edgePath {
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .mermaid .edgePath:hover {
+  stroke-width: 2.5px;
+  cursor: pointer;
+}
+
+/* Flowchart specific styling */
+.mermaid .flowchart-link {
   stroke-width: 2px;
+}
+
+/* Sequence diagram specific styling */
+.mermaid .actor {
+  stroke-width: 1.5px;
+}
+
+.mermaid .messageLine0 {
+  stroke-width: 1.5px;
+}
+
+.mermaid .messageLine1 {
+  stroke-width: 1.5px;
+}
+
+.mermaid .messageText {
+  font-size: 0.9rem;
+}
+
+/* Class diagram specific styling */
+.mermaid .classLabel .label {
+  font-weight: normal;
+}
+
+/* ER diagram specific styling */
+.mermaid .er.relationshipLabelBox {
+  font-size: 0.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mermaid {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
 }
 
 /* Label styling */
