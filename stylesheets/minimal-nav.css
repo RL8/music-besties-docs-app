@@ -1,0 +1,18 @@
+/* Minimal navigation enhancements */
+
+/* Hide redundant section titles from sidebar */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
+  display: none;
+}
+
+/* Keep nested navigation visible */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav {
+  display: block !important;
+}
+
+/* Add subtle visual separation between sections */
+.md-nav--primary > .md-nav__list > .md-nav__item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+}
