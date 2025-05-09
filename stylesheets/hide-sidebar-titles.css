@@ -1,0 +1,31 @@
+/* Hide redundant section titles from sidebar */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
+  display: none;
+}
+
+/* But keep the toggle functionality for the sections */
+.md-nav--primary > .md-nav__list > .md-nav__item {
+  padding-top: 0;
+}
+
+/* Add section dividers instead of titles */
+.md-nav--primary > .md-nav__list > .md-nav__item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Keep the nested navigation visible */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav {
+  display: block !important;
+}
+
+/* Remove extra padding that would be created by hidden items */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list {
+  margin-top: 0;
+}
+
+/* Ensure toggle all button is visible */
+.section-toggle-button {
+  margin-bottom: 1rem !important;
+}
