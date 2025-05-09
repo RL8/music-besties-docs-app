@@ -598,6 +598,60 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sidebar-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sidebar Panel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      About View
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profile-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Profile View
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings View
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#termsprivacy-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terms/Privacy View
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#left-sidebar-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Left Sidebar Navigation
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1817,6 +1871,241 @@
 <li>Save functionality to persist selections</li>
 </ul>
 <p>The Edit Rankings View is designed to be intuitive and easy to use, allowing users to quickly create and modify their rankings.</p>
+<h2 id="sidebar-panel">Sidebar Panel<a class="headerlink" href="#sidebar-panel" title="Permanent link">&para;</a></h2>
+<p>The Sidebar Panel provides detailed information about a selected era, including rankings and reviews. It slides in from the side when a user taps on an era card.</p>
+<p><strong>Figure: Sidebar Panel Layout</strong></p>
+<div class="highlight"><pre><span></span><code>+-----------------------------------------------------+
+|  ← Red ❤️                                  [X]     |
++-----------------------------------------------------+
+|                                                     |
+| | Rankings | Review &amp; Notes |                       |
++-----------------------------------------------------+
+|                                                     |
+| Your Ranked Songs:                                  |
+|                                                     |
+| 1. All Too Well                                     |
+| 2. State of Grace                                   |
+| 3. 22                                               |
+| 4. I Knew You Were Trouble                          |
+| 5. Begin Again                                      |
+|                                                     |
+| Total: 5 of 19 songs ranked                         |
+|                                                     |
++-----------------------------------------------------+
+</code></pre></div>
+<p><em>Sidebar panel showing the Rankings tab with an ordered list of selected songs. The panel includes a header with the era name and emoji, tab navigation, and a count of ranked items. The X button allows users to close the panel and return to the previous view.</em></p>
+<p>Key features of the Sidebar Panel include:</p>
+<ul>
+<li>Panel header showing the selected era name, emoji, and close button</li>
+<li>Tab navigation between "Rankings" and "Review &amp; Notes"</li>
+<li>Ordered list of ranked items for the selected category</li>
+<li>Count of ranked items versus total available</li>
+<li>Ability to switch between tabs to view different information</li>
+<li>Close button to dismiss the panel</li>
+</ul>
+<p><strong>Figure: Sidebar Panel - Review Tab</strong></p>
+<div class="highlight"><pre><span></span><code>+-----------------------------------------------------+
+|  ← Red ❤️                                  [X]     |
++-----------------------------------------------------+
+|                                                     |
+| | Rankings | Review &amp; Notes |                       |
++-----------------------------------------------------+
+|                                                     |
+| Your Rating:                                        |
+| ★★★★★                                           |
+|                                                     |
+| Your Review:                                        |
+| &quot;This album perfectly captures the emotions of      |
+| heartbreak and moving on. All Too Well is an        |
+| absolute masterpiece.&quot;                              |
+|                                                     |
+| Last updated: May 8, 2025                           |
+|                                                     |
+| [Edit Review]                                       |
+|                                                     |
++-----------------------------------------------------+
+</code></pre></div>
+<p><em>Sidebar panel showing the Review &amp; Notes tab with the user's rating and written review. The panel includes a star rating visualization, text review area, timestamp, and an Edit Review button for making changes.</em></p>
+<h2 id="about-view">About View<a class="headerlink" href="#about-view" title="Permanent link">&para;</a></h2>
+<p>The About View provides information about the application, including its purpose, version, and credits.</p>
+<p><strong>Figure: About View Layout</strong></p>
+<div class="highlight"><pre><span></span><code>+-----------------------------------------------------+
+|  ← About                                           |
++-----------------------------------------------------+
+|                                                     |
+| # Music Besties                                     |
+|                                                     |
+| Music Besties is a fan-made application designed    |
+| to help music enthusiasts organize, rank, and       |
+| review their favorite albums and songs.             |
+|                                                     |
+| ## Features                                         |
+|                                                     |
+| - Create personalized rankings of music eras        |
+| - Select favorite songs from each era               |
+| - Write reviews and rate albums                     |
+| - Track your music preferences over time            |
+|                                                     |
+| ## Version                                          |
+|                                                     |
+| Version: 1.0.0                                      |
+| Released: May 1, 2025                               |
+|                                                     |
+| ## Credits                                          |
+|                                                     |
+| Developed by: Music Besties Team                    |
+| Contact: support@musicbesties.example.com           |
+|                                                     |
++-----------------------------------------------------+
+</code></pre></div>
+<p><em>About view showing application information, features, version details, and credits. The screen includes a back button in the header for returning to the previous view.</em></p>
+<h2 id="profile-view">Profile View<a class="headerlink" href="#profile-view" title="Permanent link">&para;</a></h2>
+<p>The Profile View displays user-specific information, statistics, and preferences.</p>
+<p><strong>Figure: Profile View Layout</strong></p>
+<div class="highlight"><pre><span></span><code>+-----------------------------------------------------+
+|  ← Profile                                         |
++-----------------------------------------------------+
+|                                                     |
+|                   [Profile Image]                   |
+|                                                     |
+|                   Music Lover                       |
+|                                                     |
+| ## Statistics                                       |
+|                                                     |
+| Rankings Created: 12                                |
+| Reviews Written: 8                                  |
+| Favorite Era: Red                                   |
+| Account Age: 24 days                                |
+|                                                     |
+| ## Activity                                         |
+|                                                     |
+| Last Ranking: May 8, 2025                           |
+| Last Review: May 7, 2025                            |
+|                                                     |
+| ## Preferences                                      |
+|                                                     |
+| Theme: System Default                               |
+| Notifications: On                                   |
+| Data Sync: Off                                      |
+|                                                     |
+| [Edit Preferences]                                  |
+|                                                     |
++-----------------------------------------------------+
+</code></pre></div>
+<p><em>Profile view showing user information, statistics, activity history, and preferences. The screen includes a profile image, user statistics, recent activity, and preference settings with an edit button.</em></p>
+<h2 id="settings-view">Settings View<a class="headerlink" href="#settings-view" title="Permanent link">&para;</a></h2>
+<p>The Settings View allows users to configure application preferences and options.</p>
+<p><strong>Figure: Settings View Layout</strong></p>
+<div class="highlight"><pre><span></span><code>+-----------------------------------------------------+
+|  ← Settings                                        |
++-----------------------------------------------------+
+|                                                     |
+| ## Appearance                                       |
+|                                                     |
+| Theme:                                              |
+| ( ) Light                                           |
+| ( ) Dark                                            |
+| (•) System Default                                  |
+|                                                     |
+| ## Notifications                                    |
+|                                                     |
+| Enable Notifications: [X]                           |
+| Ranking Reminders:    [X]                           |
+| Review Reminders:     [ ]                           |
+|                                                     |
+| ## Data                                             |
+|                                                     |
+| Sync Data:            [ ]                           |
+| Auto-Save:            [X]                           |
+|                                                     |
+| ## Advanced                                         |
+|                                                     |
+| [Reset All Rankings]                                |
+| [Clear All Reviews]                                 |
+| [Reset Application]                                 |
+|                                                     |
++-----------------------------------------------------+
+</code></pre></div>
+<p><em>Settings view showing configuration options organized into categories. The screen includes toggle switches, radio buttons, and action buttons for various settings. A back button in the header allows returning to the previous view.</em></p>
+<h2 id="termsprivacy-view">Terms/Privacy View<a class="headerlink" href="#termsprivacy-view" title="Permanent link">&para;</a></h2>
+<p>The Terms/Privacy View provides legal information about the application's terms of service and privacy policy.</p>
+<p><strong>Figure: Terms/Privacy View Layout</strong></p>
+<div class="highlight"><pre><span></span><code>+-----------------------------------------------------+
+|  ← Terms &amp; Privacy                                 |
++-----------------------------------------------------+
+|                                                     |
+| # Terms of Service and Privacy Policy              |
+|                                                     |
+| ## Terms of Service                                 |
+|                                                     |
+| Music Besties is an unofficial fan-made application |
+| not affiliated with any music artist or label.      |
+| By using this application, you agree to the         |
+| following terms:                                    |
+|                                                     |
+| 1. This application is for personal use only        |
+| 2. User-generated content remains your property     |
+| 3. Misuse of the application is prohibited          |
+| 4. Service may change without prior notice          |
+|                                                     |
+| ## Privacy Policy                                   |
+|                                                     |
+| Music Besties respects your privacy. We collect     |
+| the following data:                                 |
+|                                                     |
+| - Rankings and reviews you create                   |
+| - Application preferences                           |
+| - Basic usage statistics                            |
+|                                                     |
+| All data is stored locally on your device unless    |
+| you enable sync features.                           |
+|                                                     |
+| Last Updated: May 1, 2025                           |
+|                                                     |
++-----------------------------------------------------+
+</code></pre></div>
+<p><em>Terms and Privacy view showing legal information organized into sections. The screen includes the terms of service and privacy policy with a last updated timestamp. A back button in the header allows returning to the previous view.</em></p>
+<h2 id="left-sidebar-navigation">Left Sidebar Navigation<a class="headerlink" href="#left-sidebar-navigation" title="Permanent link">&para;</a></h2>
+<p>The Left Sidebar Navigation provides global navigation to all major sections of the application. It slides in from the left when the user taps the hamburger menu icon.</p>
+<p><strong>Figure: Left Sidebar Navigation Layout</strong></p>
+<div class="highlight"><pre><span></span><code>+---------------------+-----------------------------+
+| [X]                 |                             |
++---------------------+                             |
+|                     |                             |
+| Music Besties       |                             |
+|                     |                             |
+| ■ Dashboard         |                             |
+|                     |                             |
+| □ Profile           |                             |
+|                     |                             |
+| □ Settings          |                             |
+|                     |                             |
+| □ About             |                             |
+|                     |                             |
+| □ Terms &amp; Privacy   |                             |
+|                     |                             |
+|                     |                             |
+|                     |                             |
+|                     |                             |
+|                     |                             |
+|                     |                             |
+|                     |                             |
+|                     |                             |
+|                     |                             |
+|                     |                             |
+|                     |                             |
+|                     |                             |
++---------------------+-----------------------------+
+</code></pre></div>
+<p><em>Left sidebar navigation panel showing the main menu options with visual indicators for the current selection. The panel includes the app name at the top, navigation menu items with icons, and a close button. The active section (Dashboard) is highlighted to show the current location.</em></p>
+<p>Key features of the Left Sidebar Navigation include:</p>
+<ul>
+<li>App branding at the top of the sidebar</li>
+<li>Vertical list of navigation menu items</li>
+<li>Visual indicators showing the currently active section</li>
+<li>Close button to dismiss the sidebar</li>
+<li>Direct access to all major application sections</li>
+</ul>
 
 
 
