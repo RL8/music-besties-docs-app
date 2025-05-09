@@ -1,0 +1,119 @@
+/* Enhanced Navigation Styling */
+
+/* Improve visual hierarchy */
+.md-nav__item {
+  margin-bottom: 2px;
+}
+
+.md-nav__item .md-nav__link {
+  padding: 4px 0;
+  transition: all 0.2s ease;
+}
+
+/* Add icons to different section types */
+.md-nav__item--nested > .md-nav__link::before {
+  content: "📁 ";
+}
+
+.md-nav__item--nested.md-nav__item--open > .md-nav__link::before {
+  content: "📂 ";
+}
+
+.md-nav__item:not(.md-nav__item--nested) > .md-nav__link::before {
+  content: "📄 ";
+}
+
+/* Highlight active items more clearly */
+.md-nav__link--active {
+  font-weight: bold;
+  color: var(--md-primary-fg-color) !important;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-left: 3px solid var(--md-primary-fg-color);
+  padding-left: 10px !important;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Improve hover effects */
+.md-nav__link:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  transform: translateX(2px);
+}
+
+/* Add visual separation between major sections */
+.md-nav__title {
+  margin-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+/* Add breadcrumb navigation */
+.md-header__topic {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.md-header__topic .md-ellipsis {
+  display: inline-block;
+}
+
+.md-header__topic .md-ellipsis:not(:last-child)::after {
+  content: " > ";
+  margin: 0 0.5em;
+  opacity: 0.7;
+}
+
+/* Add previous/next navigation at bottom of content */
+.nav-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-footer a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--md-primary-fg-color);
+  color: white !important;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.nav-footer a:hover {
+  background-color: var(--md-primary-fg-color--dark);
+}
+
+.nav-footer .prev::before {
+  content: "← ";
+  margin-right: 0.5em;
+}
+
+.nav-footer .next::after {
+  content: " →";
+  margin-left: 0.5em;
+}
+
+/* Collapsible sections with better indicators */
+.md-nav__toggle {
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: 0.4rem;
+}
+
+/* Improve mobile navigation */
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title {
+    background-color: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+  }
+  
+  .md-nav--primary .md-nav__title::before {
+    color: var(--md-primary-bg-color);
+  }
+}
